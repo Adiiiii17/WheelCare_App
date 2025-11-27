@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Wheelchair Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="wheelchair-section">
+                <h2>SMART WHEELCARE</h2>
+                <div class="logo-circle">
+                    <img src="./assets/wheelchair.jpg" alt="Wheelchair" class="wheelchair-logo" />
+                </div>
+            </div>
+            <div class="battery-section">
+                <h2>BATTERY</h2>
+                <div class="battery-circle">
+                    <span class="battery-percent">75%</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="monitor-grid">
+                <div class="card bp-card" id="bpCard">
+                    <div class="card-header">
+                        <h3>Live BP Monitor</h3>
+                    </div>
+                    <div class="bp-value">98 <span>BPM</span></div>
+                    <div class="bp-chart">
+                        <svg viewBox="0 0 200 80" preserveAspectRatio="none">
+                <polyline
+                  points="0,40 20,35 40,45 60,20 80,50 100,25 120,45 140,30 160,40 180,35 200,40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+                    </div>
+                </div>
+
+                <div class="card gps-card" id="gpsCard">
+                    <img src="./assets/gps.png" alt="GPS Map" class="map-image" />
+                </div>
+            </div>
+
+            <div class="camera-section card" id="cameraCard">
+                <div class="live-badge">
+                    <span class="live-dot"></span> LIVE
+                </div>
+                <img src="./assets/camera.avif" alt="Live Camera" class="camera-feed" />
+            </div>
+        </main>
+
+        <footer class="footer">
+            <button class="footer-btn" id="sosBtn">
+          <div class="btn-icon sos-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <span>Alert / SOS</span>
+        </button>
+
+            <button class="footer-btn mic-btn" id="micBtn">
+          <div class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"></path>
+              <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"></path>
+            </svg>
+          </div>
+        </button>
+
+            <button class="footer-btn" id="settingsBtn">
+          <div class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <span>Settings</span>
+        </button>
+        </footer>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
